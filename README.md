@@ -1,6 +1,6 @@
 # IaC 실습 전 환경 구성
 
-![image.png](0183f1e8-4d13-40d0-8443-8a6e47ce2394.png)
+![image](./images/0183f1e8-4d13-40d0-8443-8a6e47ce2394.png)
 
 이 페이지는 **Terraform 코드 실행에 앞서, 시나리오 실습 환경을 자동화하기 위해 필요한 기본 도구(Terraform, AWS CLI)의 설치 및 설정 방법**을 안내합니다.
 
@@ -18,7 +18,7 @@ https://developer.hashicorp.com/terraform/install#windows
 
 `homebrew --version`
 
-![스크린샷 2025-07-22 오후 3.26.19.png](%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2025-07-22_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_3.26.19.png)
+![Homebrew 확인](./images/스크린샷_2025-07-22_오후_3.26.19.png)
 
 <aside>
 
@@ -59,15 +59,14 @@ brew tap hashicorp/tap
 brew install hashicorp/tap/terraform
 ```
 
-![스크린샷 2025-07-22 오후 3.42.37.png](f62fd21f-69a1-4ede-b301-5ec8effea165.png)
-
-![스크린샷 2025-07-22 오후 3.44.08.png](ef6ab7d5-70e8-4a68-b418-b2a6dd16abaa.png)
+![Terraform 설치 1](./images/f62fd21f-69a1-4ede-b301-5ec8effea165.png)
+![Terraform 설치 2](./images/ef6ab7d5-70e8-4a68-b418-b2a6dd16abaa.png)
 
 **STEP 3) Terraform 설치 확인**
 
 `terraform --version`
 
-![스크린샷 2025-07-22 오후 3.46.45.png](%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2025-07-22_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_3.46.45.png)
+![버전 확인](./images/스크린샷_2025-07-22_오후_3.46.45.png)
 
 <aside>
 
@@ -79,7 +78,7 @@ brew install hashicorp/tap/terraform
 
 **STEP 1) Terraform 파일 다운로드**
 
-![image.png](image.png)
+![Terraform 파일 다운로드](./images/image.png)
 
 <aside>
 
@@ -89,9 +88,9 @@ brew install hashicorp/tap/terraform
 - **AMD64: 64비트용 버전**
 </aside>
 
-![image.png](d866451a-98ea-46e7-8b2c-490244ab18f2.png)
+![Terraform 다운로드 링크](./images/d866451a-98ea-46e7-8b2c-490244ab18f2.png)
 
-![image.png](image%201.png)
+![압축 예시](./images/image%201.png)
 
 <aside>
 
@@ -103,22 +102,23 @@ brew install hashicorp/tap/terraform
 
 - "내 컴퓨터" 우클릭 → "속성" → "고급 시스템 설정" → "환경 변수"
     
-    ![image.png](image%202.png)
+    ![환경 변수 설정 1](./images/image%202.png)
     
 - "시스템 변수"에서 **`Path`** 선택 후 "편집"
     
-    ![image.png](b0cee41a-7775-4088-b6d0-890487c9bc0b.png)
+    ![환경 변수 설정 2](./images/b0cee41a-7775-4088-b6d0-890487c9bc0b.png)
     
 - 새로 만들기에 **`C:\terraform`** 폴더 경로 추가 → 저장
     
-    ![image.png](image%203.png)
+    ![환경 변수 설정 3](./images/image%203.png)
     
 
 **STEP 3) Terraform 설치 확인**
 
 `terraform -version`
 
-![image.png](image%204.png)
+![terraform.exe 확인](./images/image%204.png)
+
 
 <aside>
 
@@ -132,7 +132,7 @@ brew install hashicorp/tap/terraform
 
 **[ 링크 복사 ]**
 
-![image.png](image%205.png)
+![Linux 다운로드 링크](./images/image%205.png)
 
 ```bash
 # 버전/아키텍처에 맞게 링크 변경
@@ -147,7 +147,7 @@ wget https://releases.hashicorp.com/terraform/1.12.0/terraform_1.12.0_linux_amd6
 
 **[ wget 다운로드 ]**
 
-![image.png](a23f4180-c6b6-496d-8400-2b2fde0a6322.png)
+![wget](./images/a23f4180-c6b6-496d-8400-2b2fde0a6322.png)
 
 <aside>
 
@@ -162,7 +162,7 @@ wget https://releases.hashicorp.com/terraform/1.12.0/terraform_1.12.0_linux_amd6
 unzip terraform_1.12.0_linux_amd64.zip
 ```
 
-![image.png](7e56cfa8-9f57-43bc-8d2b-4d668def081c.png)
+![압축 해제](./images/7e56cfa8-9f57-43bc-8d2b-4d668def081c.png)
 
 <aside>
 
@@ -184,7 +184,7 @@ echo $PATH
 sudo mv terraform /usr/local/bin/
 ```
 
-![image.png](03b9e40e-744c-4c7d-accb-6558fadb004c.png)
+![실행파일 이동](./images/03b9e40e-744c-4c7d-accb-6558fadb004c.png)
 
 <aside>
 
@@ -199,7 +199,8 @@ sudo mv terraform /usr/local/bin/
 terraform -version
 ```
 
-![image.png](image%206.png)
+![terraform version 확인](./images/image%206.png)
+
 
 <aside>
 
@@ -215,7 +216,7 @@ https://docs.aws.amazon.com/ko_kr/cli/latest/userguide/getting-started-install.h
 
 **STEP 1) AWS CLI 설치**
 
-![image.png](image%207.png)
+![AWS CLI 설치](./images/image%207.png)
 
 <aside>
 
@@ -227,7 +228,7 @@ CLI가 설치되어 있는 실습자는 **STEP 2) 액세스 키 생성**으로 �
 
 - **Window**
     
-    ![image.png](image%208.png)
+    ![AWS CLI Windows](./images/image%208.png)
     
     **[ AWS 버전 확인 ]**
     
@@ -235,11 +236,11 @@ CLI가 설치되어 있는 실습자는 **STEP 2) 액세스 키 생성**으로 �
     aws --version
     ```
     
-    ![image.png](image%209.png)
+    ![버전 확인](./images/image%209.png)
     
 - **macOS**
     
-    ![스크린샷 2025-07-20 오후 4.40.56.png](%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2025-07-20_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_4.40.56.png)
+    ![macOS 설치](./images/스크린샷_2025-07-20_오후_4.40.56.png)
     
     ```bash
     # macOS 환경내 aws cli 설치 명령어
@@ -254,12 +255,12 @@ CLI가 설치되어 있는 실습자는 **STEP 2) 액세스 키 생성**으로 �
     aws --version
     ```
     
-    ![스크린샷 2025-07-20 오후 4.34.32.png](%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2025-07-20_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_4.34.32.png)
+    ![macOS 버전](./images/스크린샷_2025-07-20_오후_4.34.32.png)
     
 
 **STEP 2) 액세스 키 생성**
 
-![image.png](image%2010.png)
+![Access Key 생성 1](./images/image%2010.png)
 
 <aside>
 
@@ -271,7 +272,7 @@ CLI가 설치되어 있는 실습자는 **STEP 2) 액세스 키 생성**으로 �
 
 **[ 액세스 키 모범 사례 및 대안 ]**
 
-![image.png](image%2011.png)
+![Access Key 생성 2](./images/image%2011.png)
 
 <aside>
 
@@ -282,7 +283,7 @@ CLI선택 후 **Next**을 클릭하여 액세스 키를 생성합니다.
 
 [ 태그 설정 - 옵션]
 
-![image.png](image%2012.png)
+![Access Key 태그](./images/image%2012.png)
 
 <aside>
 
@@ -292,7 +293,7 @@ CLI선택 후 **Next**을 클릭하여 액세스 키를 생성합니다.
 
 **[ 액세스 키 복사 ]**
 
-![image.png](image%2013.png)
+![Access Key 복사](./images/image%2013.png)
 
 <aside>
 
@@ -306,11 +307,11 @@ CLI선택 후 **Next**을 클릭하여 액세스 키를 생성합니다.
 aws configure
 ```
 
-![▲ window](2.png)
+![aws configure window](./images/2.png)
 
 ▲ window
 
-![▲ macOS](%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2025-07-20_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_4.57.32.png)
+![aws configure macOS](./images/스크린샷_2025-07-20_오후_4.57.32.png)
 
 ▲ macOS
 
@@ -330,11 +331,11 @@ aws configure
 aws configure list
 ```
 
-![▲ window](image%2014.png)
+![AWS 연결 확인 - window](./images/image%2014.png)
 
 ▲ window
 
-![▲ macOS](%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2025-07-20_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_5.01.19.png)
+![AWS 연결 확인 - macOS](./images/스크린샷_2025-07-20_오후_5.01.19.png)
 
 ▲ macOS
 
